@@ -14,17 +14,17 @@ spec:
     spec:
       containers:
         - name: playground-app
-          image: wil42/playground:v1
+          image: wil42/playground:v2
           ports:
             - containerPort: 8888
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: playground-srv
+  name: playground-svc
 spec:
   selector:
-    app: playground-srv
+    app: playground-svc
   ports:
     - port: 80
       targetPort: 8888
