@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: playground-app
-          image: wil42/playground:v2
+          image: wil42/playground:v1
           ports:
             - containerPort: 8888
 ---
@@ -26,5 +26,5 @@ spec:
   selector:
     app: playground-svc
   ports:
-    - port: 80
+    - port: 6666
       targetPort: 8888
